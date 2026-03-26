@@ -1,0 +1,48 @@
+# Skills
+
+A collection of reusable skills for AI coding agents (Claude Code, Codex, and others).
+
+Each skill is a self-contained directory with a `SKILL.md` that defines when and how the agent should use it.
+
+## Skills
+
+| Skill | Description |
+|---|---|
+| [cli-for-agent](cli-for-agent/) | Design and review CLIs for reliable agent automation: non-interactive flags, structured output, fast errors, idempotency |
+| [init](init/) | Generate a minimal AGENTS.md context file for a repository using the WHAT/WHY/HOW framework |
+| [mcp-for-agents](mcp-for-agents/) | Design and review MCP servers for AI agents: outcome-oriented tools, flat parameters, actionable errors, token efficiency |
+| [regression-tests](regression-tests/) | Fix-verify-lockdown workflow: catalog issues, fix one at a time with verification, then write e2e regression tests covering each fix and its failure family |
+| [simplify-code](simplify-code/) | Review git diffs for reuse, quality, efficiency, and clarity issues with parallel sub-agent reviews, then optionally apply safe behavior-preserving fixes |
+| [visual-explainer](visual-explainer/) | Generate self-contained HTML visualizations for architecture diagrams, flowcharts, data tables, timelines, and dashboards |
+
+## Installation
+
+### Claude Code
+
+```bash
+# Install a single skill
+claude skill add /path/to/Skills/regression-tests
+
+# Or symlink into your skills directory
+ln -s /path/to/Skills/regression-tests ~/.claude/skills/regression-tests
+```
+
+### Manual
+
+Copy or symlink the skill directory into your agent's skill search path.
+
+## Structure
+
+Each skill follows this layout:
+
+```
+skill-name/
+  SKILL.md          # Required. Frontmatter (name, description) + instructions.
+  reference/        # Optional. Docs loaded into context as needed.
+  templates/        # Optional. File templates used in output.
+  prompts/          # Optional. Sub-agent prompt templates.
+```
+
+## License
+
+See individual skill directories for licensing. Skills without explicit licenses are provided as-is.
