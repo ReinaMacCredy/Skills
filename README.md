@@ -12,7 +12,7 @@ Each skill is a self-contained directory with a `SKILL.md` that defines when and
 | [cli-for-agent](cli-for-agent/) | Design and review CLIs for reliable agent automation: non-interactive flags, structured output, fast errors, idempotency |
 | [init](init/) | Generate a minimal AGENTS.md context file for a repository using the WHAT/WHY/HOW framework |
 | [mcp-for-agents](mcp-for-agents/) | Design and review MCP servers for AI agents: outcome-oriented tools, flat parameters, actionable errors, token efficiency |
-| [regression-tests](regression-tests/) | Fix-verify-lockdown workflow: catalog issues, fix one at a time with verification, then write e2e regression tests covering each fix and its failure family |
+| [systematic-fix](systematic-fix/) | Fix-verify-lockdown workflow: catalog issues, fix one at a time with verification, then write e2e regression tests covering each fix and its failure family |
 | [simplify-code](simplify-code/) | Review git diffs for reuse, quality, efficiency, and clarity issues with parallel sub-agent reviews, then optionally apply safe behavior-preserving fixes |
 | [visual-explainer](visual-explainer/) | Generate self-contained HTML visualizations for architecture diagrams, flowcharts, data tables, timelines, and dashboards |
 

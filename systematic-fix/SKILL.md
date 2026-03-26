@@ -1,5 +1,5 @@
 ---
-name: regression-tests
+name: systematic-fix
 description: >-
   Disciplined bug-fix-and-lock-down workflow: catalog every issue, fix each one
   with verification, then create comprehensive e2e integration tests that would
