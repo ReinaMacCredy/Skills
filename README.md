@@ -8,6 +8,7 @@ Each skill is a self-contained directory with a `SKILL.md` that defines when and
 
 | Skill | Description |
 |---|---|
+| [codebase-audit](codebase-audit/) | Deep codebase audit: understand the project first, then systematically find hardcoded constants and unfinished code |
 | [cli-for-agent](cli-for-agent/) | Design and review CLIs for reliable agent automation: non-interactive flags, structured output, fast errors, idempotency |
 | [init](init/) | Generate a minimal AGENTS.md context file for a repository using the WHAT/WHY/HOW framework |
 | [mcp-for-agents](mcp-for-agents/) | Design and review MCP servers for AI agents: outcome-oriented tools, flat parameters, actionable errors, token efficiency |
