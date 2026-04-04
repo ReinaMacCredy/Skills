@@ -14,6 +14,7 @@ Each skill is a self-contained directory with a `SKILL.md` that defines when and
 | [mcp-for-agents](mcp-for-agents/) | Design and review MCP servers for AI agents: outcome-oriented tools, flat parameters, actionable errors, token efficiency |
 | [systematic-fix](systematic-fix/) | Fix-verify-lockdown workflow: catalog issues, fix one at a time with verification, then write e2e regression tests covering each fix and its failure family |
 | [simplify-code](simplify-code/) | Review git diffs for reuse, quality, efficiency, and clarity issues with parallel sub-agent reviews, then optionally apply safe behavior-preserving fixes |
+| [blueprint](blueprint/) | Generate visual HTML blueprint pages and structured markdown plan specs with architecture diagrams, phased task breakdowns, file change maps, dependency graphs, risk matrices, and verification checklists |
 | [visual-explainer](visual-explainer/) | Generate self-contained HTML visualizations for architecture diagrams, flowcharts, data tables, timelines, and dashboards |
 
 ## Installation
