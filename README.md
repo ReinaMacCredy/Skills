@@ -19,14 +19,22 @@ Each skill is a self-contained directory with a `SKILL.md` that defines when and
 
 ## Installation
 
+### skills.sh (recommended)
+
+Install any skill from this collection using the [`skills` CLI](https://skills.sh/docs):
+
+```bash
+npx skills add ReinaMacCredy/Skills
+```
+
 ### Claude Code
 
 ```bash
 # Install a single skill
-claude skill add /path/to/Skills/regression-tests
+claude skill add /path/to/Skills/systematic-fix
 
 # Or symlink into your skills directory
-ln -s /path/to/Skills/regression-tests ~/.claude/skills/regression-tests
+ln -s /path/to/Skills/systematic-fix ~/.claude/skills/systematic-fix
 ```
 
 ### Manual
