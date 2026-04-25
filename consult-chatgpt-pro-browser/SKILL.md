@@ -12,17 +12,21 @@ ChatGPT is an outside reviewer, not an authority. Its response can be wrong, sta
 
 ## Required Browser Runtime
 
-Before any browser action, read and follow the Browser skill:
+Before any browser action, read and follow the installed Browser skill from the current Codex session. Prefer the concrete `browser-use:browser` skill path shown in the session's available skills list.
 
-`/Users/reinamaccredy/.codex/plugins/cache/openai-bundled/browser-use/0.1.0-alpha1/skills/browser/SKILL.md`
+If the session does not expose a concrete path, locate the Browser plugin under the current user's Codex plugin cache, commonly:
+
+`${HOME}/.codex/plugins/cache/openai-bundled/browser-use/<version>/skills/browser/SKILL.md`
 
 Use the Browser plugin through the Node REPL `js` tool only:
 
-- import `/Users/reinamaccredy/.codex/plugins/cache/openai-bundled/browser-use/0.1.0-alpha1/scripts/browser-client.mjs`
+- import the Browser plugin's `scripts/browser-client.mjs` from the same discovered `browser-use/<version>` plugin directory
 - call `setupAtlasRuntime({ globals: globalThis, backend: "iab" })`
 - reuse the top-level `tab` binding across cells
 - prefer `agent.browser.tabs.selected()` when the current in-app tab is already on `chatgpt.com`
 - do not fall back to Computer Use unless Browser is unavailable and that blocker has been reported
+
+Do not hardcode a username, home directory, or Browser plugin version. Discover the installed Browser skill and script paths in the current environment.
 
 If browser-use reports that the current `tab` is not part of the browser session, reacquire it with `globalThis.tab = await agent.browser.tabs.selected()` and create a new tab only if selected tab is unavailable. If the Node REPL reports that a variable has already been declared, keep `tab` stable and use unique `globalThis.<scratchName>` variables for temporary values.
 
