@@ -1,0 +1,50 @@
+{
+  "skill_name": "consult-chatgpt-pro-browser",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Use the Codex in-app browser with browser-use to ask ChatGPT Pro for an outside review of this refactor plan. Keep the packet minimal and validate the answer locally before recommending anything.",
+      "expected_output": "A scoped browser-use workflow that inspects local evidence first, prepares an allowlisted packet, gets approval before sending to chatgpt.com, submits through the in-app browser, and separates external advice from local validation.",
+      "files": [],
+      "expectations": [
+        "Uses browser-use:browser with the iab backend rather than Computer Use by default",
+        "Starts from a fresh ChatGPT chat and does not continue an existing /c/ conversation",
+        "Displays the exact packet, visible ChatGPT account or workspace if available, and destination before sending",
+        "Sends only after user approval for that exact packet and destination",
+        "Verifies after clicking Send prompt that the prompt left the composer or ChatGPT started responding",
+        "Does not send secrets, env files, credentials, browser data, whole-repo archives, or unrelated logs",
+        "Performs a Codex review pass after ChatGPT finishes before returning the final answer",
+        "Validates material ChatGPT findings against local evidence before recommending action"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "ask your big brother from the built-in browser to review my current git diff for regressions. One outside opinion only, then your final call. Don't change files yet.",
+      "expected_output": "A read-only review flow that uses browser-use to start a fresh ChatGPT chat, builds a diff-focused approved packet, and returns findings without editing files.",
+      "files": [],
+      "expectations": [
+        "Treats the request as read-only and does not edit files",
+        "Creates or verifies a fresh ChatGPT chat before composing the packet",
+        "Packages only the current diff and narrowly relevant context",
+        "Does not treat the request as blanket approval to transmit arbitrary files",
+        "Retries or reports a blocker if the first send click leaves the prompt in the composer",
+        "Reports Browser/chatgpt.com/model status and blockers honestly",
+        "Includes Codex's own accepted/rejected/unverified review of ChatGPT's advice",
+        "Separates external advice from Codex local validation"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Use browser-use ChatGPT Pro to sanity check this bug hypothesis. The stack trace has customer IDs and tokens, so be careful what leaves my machine.",
+      "expected_output": "A privacy-aware browser-use consultation flow that stops for redaction or confirmation before submitting sensitive logs, uses a sanitized summary when possible, and reports uncertainty caused by redaction.",
+      "files": [],
+      "expectations": [
+        "Recognizes customer IDs and tokens as sensitive transmission risk",
+        "Stops for explicit approval or redacts before sending anything to chatgpt.com",
+        "Uses a sanitized summary instead of raw logs when possible",
+        "Does not inspect browser history, clipboard, cookies, or unrelated tabs",
+        "Clearly reports data not sent and any uncertainty caused by redaction"
+      ]
+    }
+  ]
+}
