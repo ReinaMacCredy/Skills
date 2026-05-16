@@ -18,6 +18,10 @@ Each skill is a self-contained directory with a `SKILL.md` that defines when and
 | [simplify-code](simplify-code/) | Review git diffs for reuse, quality, efficiency, and clarity issues with parallel sub-agent reviews, then optionally apply safe behavior-preserving fixes |
 | [blueprint](blueprint/) | Generate visual HTML blueprint pages and structured markdown plan specs with architecture diagrams, phased task breakdowns, file change maps, dependency graphs, risk matrices, and verification checklists |
 | [visual-explainer](visual-explainer/) | Generate self-contained HTML visualizations for architecture diagrams, flowcharts, data tables, timelines, and dashboards |
+| [bug-hunt-swarm](bug-hunt-swarm/) | Parallel read-only multi-agent root-cause investigation that ranks hypotheses, verifies the leading one against real code, and recommends the fastest proof path |
+| [review-swarm](review-swarm/) | Parallel read-only multi-agent review of a diff or file scope, surfacing regressions, security risks, performance issues, and contract gaps with a prioritized fix path |
+| [orchestrator-only](orchestrator-only/) | Orchestration-only mode: brainstorm, spec, decompose, and dispatch sub-agents in parallel without implementing the work yourself |
+| [next-move](next-move/) | Deep strategic analysis to identify the single highest-leverage, most innovative addition for a project |
 
 ## Installation
 

@@ -1,0 +1,104 @@
+{
+  "skill_name": "next-move",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "What's the single smartest and most radically innovative and accretive and useful and compelling addition you could make to the project at this point?",
+      "expected_output": "A single, specific, non-obvious strategic recommendation with full argument, compounding analysis, technical sketch, and runner-up. Should reference actual code/architecture from the codebase.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "format-complete",
+          "text": "Output contains all required sections: The Move title, The Insight, The Argument, How It Compounds, The Sketch, Risks and Assumptions, Runner-Up",
+          "type": "structural"
+        },
+        {
+          "id": "single-recommendation",
+          "text": "Recommends exactly ONE primary addition, not a list of multiple improvements",
+          "type": "content"
+        },
+        {
+          "id": "codebase-specific",
+          "text": "References specific files, modules, or architectural patterns from the actual codebase (not generic advice)",
+          "type": "content"
+        },
+        {
+          "id": "non-obvious",
+          "text": "The recommendation is not a generic best practice (tests, docs, CI/CD, linting, monitoring) but a genuinely strategic insight",
+          "type": "quality"
+        },
+        {
+          "id": "compound-story",
+          "text": "The compounding section describes specific future capabilities enabled by this addition, not vague 'it will be better'",
+          "type": "quality"
+        },
+        {
+          "id": "sketch-concrete",
+          "text": "The technical sketch includes enough detail (components, interfaces, data flows) that someone could start implementing",
+          "type": "quality"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "I've been building this for months. What am I missing? What's the one thing that would make this dramatically better?",
+      "expected_output": "Same quality recommendation but with empathy for the 'stuck' framing. Should acknowledge existing work before proposing the addition.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "format-complete",
+          "text": "Output contains all required sections: The Move title, The Insight, The Argument, How It Compounds, The Sketch, Risks and Assumptions, Runner-Up",
+          "type": "structural"
+        },
+        {
+          "id": "single-recommendation",
+          "text": "Recommends exactly ONE primary addition, not a list of multiple improvements",
+          "type": "content"
+        },
+        {
+          "id": "codebase-specific",
+          "text": "References specific files, modules, or architectural patterns from the actual codebase",
+          "type": "content"
+        },
+        {
+          "id": "non-obvious",
+          "text": "The recommendation is not a generic best practice but a genuinely strategic insight",
+          "type": "quality"
+        },
+        {
+          "id": "acknowledges-existing",
+          "text": "Acknowledges the existing work and strengths before proposing what's missing",
+          "type": "quality"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "If you could add one feature to this project that would compound in value over time, what would it be?",
+      "expected_output": "Recommendation with especially strong compounding analysis, since the prompt specifically asks about compounding value.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "format-complete",
+          "text": "Output contains all required sections: The Move title, The Insight, The Argument, How It Compounds, The Sketch, Risks and Assumptions, Runner-Up",
+          "type": "structural"
+        },
+        {
+          "id": "single-recommendation",
+          "text": "Recommends exactly ONE primary addition",
+          "type": "content"
+        },
+        {
+          "id": "codebase-specific",
+          "text": "References specific files, modules, or architectural patterns from the actual codebase",
+          "type": "content"
+        },
+        {
+          "id": "compound-emphasis",
+          "text": "The compounding analysis is particularly detailed given the prompt's focus on compounding value -- includes specific timeframes and cascading effects",
+          "type": "quality"
+        }
+      ]
+    }
+  ]
+}
