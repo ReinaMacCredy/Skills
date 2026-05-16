@@ -22,6 +22,7 @@ Each skill is a self-contained directory with a `SKILL.md` that defines when and
 | [review-swarm](review-swarm/) | Parallel read-only multi-agent review of a diff or file scope, surfacing regressions, security risks, performance issues, and contract gaps with a prioritized fix path |
 | [orchestrator-only](orchestrator-only/) | Orchestration-only mode: brainstorm, spec, decompose, and dispatch sub-agents in parallel without implementing the work yourself |
 | [next-move](next-move/) | Deep strategic analysis to identify the single highest-leverage, most innovative addition for a project |
+| [goal-distill](goal-distill/) | Compress the current session into a paste-ready `/goal` prompt that drives an autonomous phase loop in a fresh session |
 
 ## Installation
 
