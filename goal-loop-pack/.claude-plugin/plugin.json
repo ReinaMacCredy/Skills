@@ -1,0 +1,23 @@
+{
+  "name": "goal-loop-pack",
+  "description": "Autonomous phase-by-phase plan execution for Claude Code. A single self-contained skill (goal-loop) that decomposes each phase via Plan-subagent, dispatches parallel implementation waves through the inlined orchestrator pattern, gates every phase with advisor + /code-review + the inlined review-swarm protocol, and commits. Zero third-party skill dependencies.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Reina MacCredy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "goal-loop",
+    "autonomous-execution",
+    "phase-by-phase",
+    "orchestration",
+    "parallel-review",
+    "advisor-gate",
+    "code-review",
+    "review-swarm",
+    "self-contained"
+  ],
+  "skills": [
+    "./skills/goal-loop"
+  ]
+}
