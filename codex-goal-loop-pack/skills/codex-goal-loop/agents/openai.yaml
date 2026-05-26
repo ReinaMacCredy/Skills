@@ -1,0 +1,7 @@
+interface:
+  display_name: "Codex Goal Loop"
+  short_description: "Spec plans and gated Codex execution"
+  default_prompt: "Use $codex-goal-loop spec SPEC.md PLAN.md, then use $codex-goal-loop run PLAN.md."
+
+policy:
+  allow_implicit_invocation: true

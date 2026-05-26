@@ -1,0 +1,34 @@
+{
+  "name": "codex-goal-loop-pack",
+  "version": "0.1.0",
+  "description": "Codex-only goal-loop pack with one isolated skill for spec-to-plan, phase planning, gated implementation, review, verification, commit, and resync.",
+  "author": {
+    "name": "Reina MacCredy"
+  },
+  "repository": "https://github.com/ReinaMacCredy/Skills",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "goal-loop",
+    "spec-to-plan",
+    "phase-planning",
+    "orchestration",
+    "review-gates"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Goal Loop Pack",
+    "shortDescription": "Spec-to-plan and gated Codex execution",
+    "longDescription": "A Codex-only pack with one isolated skill that turns specs into goal-loop plans, decomposes phases into safe task waves, implements with verification, runs review gates, commits, and resyncs.",
+    "developerName": "Reina MacCredy",
+    "category": "Productivity",
+    "capabilities": [
+      "Write",
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "Use $codex-goal-loop spec SPEC.md PLAN.md",
+      "Use $codex-goal-loop run PLAN.md"
+    ]
+  }
+}
